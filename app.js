@@ -18,7 +18,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
+app.listen(8088, function () {
+	console.log('Example app listening on port 8088!');
+});
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
